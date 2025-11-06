@@ -9,3 +9,6 @@ urlpatterns = [
     path("lettings/", include("lettings.urls", namespace="lettings")),
     path("profiles/", include("profiles.urls", namespace="profiles")),
 ]
+
+HANDLER404 = "oc_lettings_site.views.custom_404"
+HANDLER500 = "oc_lettings_site.views.custom_500"
