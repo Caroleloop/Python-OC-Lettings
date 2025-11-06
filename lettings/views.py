@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Letting
 
 
@@ -40,7 +40,7 @@ def letting(request, letting_id):
     Raises:
         Letting.DoesNotExist: If no Letting with the given ID exists.
     """
-    letting = Letting.objects.get(id=letting_id)
+    letting = get_object_or_404(Letting, id=letting_id)
     context = {
         "title": letting.title,
         "address": letting.address,
