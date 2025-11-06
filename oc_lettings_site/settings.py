@@ -116,3 +116,6 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+HANDLER404 = "oc_lettings_site.views.custom_404"
+HANDLER500 = "oc_lettings_site.views.custom_500"
