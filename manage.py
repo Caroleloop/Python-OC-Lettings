@@ -3,7 +3,20 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'oc_lettings_site.settings')
+    """
+    Set up the Django environment and execute command-line instructions.
+
+    This function ensures the DJANGO_SETTINGS_MODULE environment variable
+    is set, imports Django's command-line execution function, and passes
+    command-line arguments to it.
+
+    Raises:
+        ImportError: If Django is not installed or not available in the
+            current PYTHONPATH.
+    """
+    # Set the default Django settings module for the project
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "oc_lettings_site.settings")
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -12,8 +25,11 @@ def main():
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
         ) from exc
+
+    # Execute the command-line instruction passed to manage.py
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+# Entry point for the script
+if __name__ == "__main__":
     main()
