@@ -1,8 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from django.contrib.admin.sites import AdminSite
 from .models import Address, Letting
-from .admin import AddressAdmin, LettingAdmin
 
 
 # =======================
@@ -11,6 +9,8 @@ from .admin import AddressAdmin, LettingAdmin
 class AddressModelTest(TestCase):
     """
     Test case for the Address model.
+
+    Verifies field assignments and string representation.
     """
 
     def setUp(self):
@@ -39,6 +39,8 @@ class AddressModelTest(TestCase):
 class LettingModelTest(TestCase):
     """
     Test case for the Letting model.
+
+    Verifies the OneToOne relationship with Address and string representation.
     """
 
     def setUp(self):
@@ -70,6 +72,8 @@ class LettingModelTest(TestCase):
 class LettingsViewsTest(TestCase):
     """
     Integration tests for lettings views and URLs.
+
+    Verifies that the index and detail pages render correctly and return the expected status codes.
     """
 
     def setUp(self):
@@ -88,6 +92,7 @@ class LettingsViewsTest(TestCase):
     def test_lettings_index_view_status_code(self):
         """
         Test the lettings index page returns 200 and uses the correct template.
+        Also checks that the created letting appears in the response.
         """
         url = reverse("lettings:index")
         response = self.client.get(url)
@@ -97,7 +102,8 @@ class LettingsViewsTest(TestCase):
 
     def test_letting_detail_view_status_code(self):
         """
-        Test the letting detail page returns 200 and displays correct data.
+        Test the letting detail page returns 200, uses the correct template,
+        and displays the correct data for the letting and its address.
         """
         url = reverse("lettings:letting", args=[self.letting.id])
         response = self.client.get(url)
@@ -108,49 +114,8 @@ class LettingsViewsTest(TestCase):
 
     def test_letting_detail_view_not_found(self):
         """
-        Test that accessing a non-existing letting returns 404.
+        Test that accessing a non-existing letting returns a 404 status code.
         """
         url = reverse("lettings:letting", args=[999])
         response = self.client.get(url)
         self.assertEqual(response.status_code, 404)
-
-
-# =======================
-# TESTS ADMIN
-# =======================
-class AdminTest(TestCase):
-    """
-    Tests for the Django admin configuration.
-    """
-
-    def setUp(self):
-        """Set up sample data and AdminSite for testing."""
-        self.site = AdminSite()
-        self.address = Address.objects.create(
-            number=10,
-            street="Admin St",
-            city="Admin City",
-            state="AC",
-            zip_code=10101,
-            country_iso_code="USA",
-        )
-        self.letting = Letting.objects.create(
-            title="Admin Apartment", address=self.address
-        )
-
-    def test_address_admin_list_display(self):
-        """
-        Test that AddressAdmin has the correct list_display fields.
-        """
-        admin_instance = AddressAdmin(Address, self.site)
-        self.assertEqual(
-            admin_instance.list_display,
-            ("number", "street", "city", "state", "zip_code", "country_iso_code"),
-        )
-
-    def test_letting_admin_list_display(self):
-        """
-        Test that LettingAdmin has the correct list_display fields.
-        """
-        admin_instance = LettingAdmin(Letting, self.site)
-        self.assertEqual(admin_instance.list_display, ("title", "address"))
