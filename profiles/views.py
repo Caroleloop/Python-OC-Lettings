@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Profile
+from django.core.exceptions import ObjectDoesNotExist
+from logging_conf import sentry_log
 
 
 def profiles_index(request):
@@ -16,9 +18,15 @@ def profiles_index(request):
     Context:
         profiles_list (QuerySet[Profile]): A queryset of all profiles in the database.
     """
-    profiles_list = Profile.objects.all()
-    context = {"profiles_list": profiles_list}
-    return render(request, "profiles/index.html", context)
+    try:
+        profiles_list = Profile.objects.all()
+        context = {"profiles_list": profiles_list}
+        sentry_log("info", f"{profiles_list.count()} profiles fetched successfully")
+        return render(request, "profiles/index.html", context)
+    except Exception as e:
+        sentry_log("exception", f"Error retrieving profiles: {e}")
+        context = {"profiles_list": []}
+        return render(request, "profiles/index.html", context)
 
 
 def profile(request, username):
@@ -36,6 +44,16 @@ def profile(request, username):
     Raises:
         Profile.DoesNotExist: If no Profile exists for the given username.
     """
-    profile = Profile.objects.get(user__username=username)
-    context = {"profile": profile}
-    return render(request, "profiles/profile.html", context)
+    try:
+        profile = Profile.objects.get(user__username=username)
+        sentry_log("info", f"Profile fetched for user: {username}")
+        context = {"profile": profile}
+        return render(request, "profiles/profile.html", context)
+    except ObjectDoesNotExist:
+        sentry_log("warning", f"Profile not found for user: {username}")
+        context = {"error": f"Profile for '{username}' does not exist."}
+        return render(request, "profiles/profile.html", context)
+    except Exception as e:
+        sentry_log("exception", f"Unexpected error for user '{username}': {e}")
+        context = {"error": "An error has occurred. Please try again later."}
+        return render(request, "profiles/profile.html", context)

@@ -1,0 +1,397 @@
+2025-11-10 18:15:50,381 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:15:53,161 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:16:35,609 - django.request - ERROR - Internal Server Error: /sentry-debug/
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\sentry_sdk\integrations\django\views.py", line 94, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py", line 7, in trigger_error
+    division_by_zero = 1 / 0
+                       ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:16:35,661 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:16:39,772 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:16:40,972 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:16:41,886 - sentry_logger - INFO - Profile fetched for user: HeadlinesGazer
+2025-11-10 18:16:43,896 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:16:56,305 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py changed, reloading.
+2025-11-10 18:16:57,170 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:17:00,791 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:17:02,064 - django.request - ERROR - Internal Server Error: /lettings/
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\sentry_sdk\integrations\django\views.py", line 94, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 20, in lettings_index
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:17:20,463 - django.request - ERROR - Internal Server Error: /lettings/
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\sentry_sdk\integrations\django\views.py", line 94, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 20, in lettings_index
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:17:28,419 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py changed, reloading.
+2025-11-10 18:17:29,298 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:18:57,918 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:18:58,817 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:19:08,364 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:19:09,115 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:19:15,658 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:19:16,386 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:19:19,524 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:19:21,121 - sentry_logger - INFO - Letting fetched successfully: ID 4
+2025-11-10 18:19:30,005 - sentry_logger - ERROR - Test Sentry triggered: division by zero
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py", line 10, in trigger_error
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:19:30,081 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:20:26,280 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\settings.py changed, reloading.
+2025-11-10 18:20:27,037 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:20:29,146 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:25:44,776 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:25:46,232 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:25:46,275 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:25:46,404 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:25:46,408 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 18:25:50,593 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:25:50,651 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:25:51,734 - sentry_logger - INFO - Profile fetched for user: HeadlinesGazer
+2025-11-10 18:25:51,791 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 18:26:00,152 - sentry_logger - ERROR - Test Sentry triggered: division by zero
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py", line 10, in trigger_error
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:26:00,229 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:27:15,832 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:27:16,102 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:27:17,684 - sentry_logger - INFO - Letting fetched successfully: ID 5
+2025-11-10 18:27:17,773 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:27:20,829 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:27:21,985 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:27:22,913 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:27:24,366 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:27:25,588 - sentry_logger - INFO - Profile fetched for user: HeadlinesGazer
+2025-11-10 18:27:28,214 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:27:29,329 - sentry_logger - INFO - Letting fetched successfully: ID 5
+2025-11-10 18:27:53,948 - sentry_logger - ERROR - Test Sentry triggered: division by zero
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py", line 10, in trigger_error
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:28:04,013 - django.request - WARNING - Not Found: /test
+2025-11-10 18:28:35,945 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:28:40,988 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:28:57,740 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:28:57,866 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:28:59,207 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:28:59,265 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:29:01,002 - sentry_logger - INFO - Profile fetched for user: AirWow
+2025-11-10 18:29:01,049 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 18:29:02,544 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:29:03,639 - sentry_logger - INFO - Letting fetched successfully: ID 1
+2025-11-10 18:29:06,915 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:30:36,499 - sentry_logger - ERROR - Unexpected error fetching letting ID 999999: No Letting matches the given query.
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+lettings.models.Letting.DoesNotExist: Letting matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 52, in letting
+    letting = get_object_or_404(Letting, id=letting_id)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 92, in get_object_or_404
+    raise Http404(
+        "No %s matches the given query." % queryset.model._meta.object_name
+    )
+django.http.response.Http404: No Letting matches the given query.
+2025-11-10 18:30:36,668 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:31:34,002 - django.request - WARNING - Not Found: /999999/
+2025-11-10 18:34:53,088 - sentry_logger - WARNING - Profile not found for user: 999999
+2025-11-10 18:34:53,211 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 18:39:27,791 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:39:28,651 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:39:33,134 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:39:34,014 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:39:36,465 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:39:37,236 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:39:38,505 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:39:38,548 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:39:38,552 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:39:38,668 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:39:38,669 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:39:38,671 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 18:39:38,675 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 18:39:44,542 - sentry_logger - WARNING - 404 Not Found: /88
+2025-11-10 18:39:44,543 - django.request - WARNING - Not Found: /88
+2025-11-10 18:40:46,891 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:40:48,955 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:40:49,012 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:40:49,015 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:40:49,128 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:40:49,129 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:40:55,300 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:40:56,411 - sentry_logger - INFO - Profile fetched for user: HeadlinesGazer
+2025-11-10 18:40:56,465 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 18:40:56,466 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 18:41:00,033 - sentry_logger - WARNING - 404 Not Found: /profiles/He
+2025-11-10 18:41:00,047 - sentry_logger - WARNING - Profile not found for user: He
+2025-11-10 18:41:13,184 - sentry_logger - WARNING - 404 Not Found: /He/
+2025-11-10 18:41:13,185 - django.request - WARNING - Not Found: /He/
+2025-11-10 18:41:28,054 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:41:28,115 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:41:28,116 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:41:29,973 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:41:33,465 - sentry_logger - WARNING - 404 Not Found: /lettings/55555
+2025-11-10 18:41:33,476 - sentry_logger - ERROR - Unexpected error fetching letting ID 55555: No Letting matches the given query.
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+lettings.models.Letting.DoesNotExist: Letting matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 52, in letting
+    letting = get_object_or_404(Letting, id=letting_id)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 92, in get_object_or_404
+    raise Http404(
+        "No %s matches the given query." % queryset.model._meta.object_name
+    )
+django.http.response.Http404: No Letting matches the given query.
+2025-11-10 18:41:42,535 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:41:42,618 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:41:42,619 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:45:49,923 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:45:50,622 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:47:09,242 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:48:03,340 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\urls.py changed, reloading.
+2025-11-10 18:48:04,085 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 18:48:07,969 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:48:08,012 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:48:08,014 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:48:08,167 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:48:08,168 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 18:48:08,169 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:48:08,170 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 18:48:13,019 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 18:48:22,963 - sentry_logger - WARNING - Test 404 triggered manually
+2025-11-10 18:48:22,995 - sentry_logger - WARNING - 404 Not Found: /favicon.ico
+2025-11-10 18:48:22,996 - django.request - WARNING - Not Found: /favicon.ico
+2025-11-10 18:48:42,026 - sentry_logger - ERROR - Test 500 triggered: division by zero
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\oc_lettings_site\views_sentry_test.py", line 14, in trigger_500
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2025-11-10 18:59:00,400 - sentry_logger - INFO - Homepage accessed
+2025-11-10 18:59:00,452 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:59:00,453 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:59:00,593 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:59:00,595 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 18:59:07,227 - sentry_logger - WARNING - 404 Not Found: /99999/
+2025-11-10 18:59:07,229 - django.request - WARNING - Not Found: /99999/
+2025-11-10 18:59:15,830 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-10 18:59:15,891 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:59:15,892 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 18:59:19,868 - sentry_logger - ERROR - Unexpected error fetching letting ID 999999: No Letting matches the given query.
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+lettings.models.Letting.DoesNotExist: Letting matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 52, in letting
+    letting = get_object_or_404(Letting, id=letting_id)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 92, in get_object_or_404
+    raise Http404(
+        "No %s matches the given query." % queryset.model._meta.object_name
+    )
+django.http.response.Http404: No Letting matches the given query.
+2025-11-10 18:59:19,926 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 18:59:19,928 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:02:59,694 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\logging_conf.py changed, reloading.
+2025-11-10 19:03:00,478 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 19:03:42,518 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\logging_conf.py changed, reloading.
+2025-11-10 19:03:43,310 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 19:03:46,366 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:03:46,413 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 19:03:46,424 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:03:47,383 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 19:03:47,384 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 19:03:47,385 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 19:03:47,387 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 19:03:53,250 - sentry_logger - WARNING - 404 Not Found: /55
+2025-11-10 19:03:53,251 - django.request - WARNING - Not Found: /55
+2025-11-10 19:04:09,763 - sentry_logger - ERROR - Unexpected error fetching letting ID 999999: No Letting matches the given query.
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+lettings.models.Letting.DoesNotExist: Letting matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 52, in letting
+    letting = get_object_or_404(Letting, id=letting_id)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 92, in get_object_or_404
+    raise Http404(
+        "No %s matches the given query." % queryset.model._meta.object_name
+    )
+django.http.response.Http404: No Letting matches the given query.
+2025-11-10 19:07:54,555 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py changed, reloading.
+2025-11-10 19:07:55,328 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 19:07:56,735 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:07:56,776 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 19:07:56,782 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:07:56,964 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 19:07:56,969 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 19:07:56,971 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 19:07:56,974 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Regular.otf
+2025-11-10 19:07:56,978 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Light.otf
+2025-11-10 19:07:56,980 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Light.otf
+2025-11-10 19:08:02,538 - sentry_logger - ERROR - 500 Internal Server Error encountered
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+lettings.models.Letting.DoesNotExist: Letting matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 52, in letting
+    letting = get_object_or_404(Letting, id=letting_id)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 92, in get_object_or_404
+    raise Http404(
+        "No %s matches the given query." % queryset.model._meta.object_name
+    )
+django.http.response.Http404: No Letting matches the given query.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\sentry_sdk\integrations\django\views.py", line 94, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 59, in letting
+    except Http404:
+           ^^^^^^^
+NameError: name 'Http404' is not defined
+2025-11-10 19:08:02,556 - django.request - ERROR - Internal Server Error: /lettings/999999/
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 90, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\db\models\query.py", line 633, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+lettings.models.Letting.DoesNotExist: Letting matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 52, in letting
+    letting = get_object_or_404(Letting, id=letting_id)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\shortcuts.py", line 92, in get_object_or_404
+    raise Http404(
+        "No %s matches the given query." % queryset.model._meta.object_name
+    )
+django.http.response.Http404: No Letting matches the given query.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\venv\Lib\site-packages\sentry_sdk\integrations\django\views.py", line 94, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+  File "C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py", line 59, in letting
+    except Http404:
+           ^^^^^^^
+NameError: name 'Http404' is not defined
+2025-11-10 19:08:02,612 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 19:08:02,614 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:08:20,523 - django.utils.autoreload - INFO - C:\Formation\Projet_13\Python-OC-Lettings\lettings\views.py changed, reloading.
+2025-11-10 19:08:21,331 - django.utils.autoreload - INFO - Watching for file changes with StatReloader
+2025-11-10 19:08:22,781 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:08:22,900 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 19:08:22,904 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Medium.otf
+2025-11-10 19:08:27,189 - sentry_logger - WARNING - Letting not found: ID 999999
+2025-11-10 19:08:27,191 - django.request - WARNING - Not Found: /lettings/999999/
+2025-11-10 19:08:39,364 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:08:39,429 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 19:08:39,432 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:08:43,211 - sentry_logger - WARNING - 404 Not Found: /5555
+2025-11-10 19:08:43,213 - django.request - WARNING - Not Found: /5555
+2025-11-10 19:08:53,730 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:08:55,481 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 19:08:55,543 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 19:08:55,546 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:08:59,641 - sentry_logger - WARNING - 404 Not Found: /profiles//6666
+2025-11-10 19:08:59,643 - django.request - WARNING - Not Found: /profiles//6666
+2025-11-10 19:09:07,217 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:09:07,959 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-10 19:09:09,982 - sentry_logger - INFO - Profile fetched for user: DavWin
+2025-11-10 19:09:10,040 - sentry_logger - WARNING - 404 Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 19:09:10,042 - django.request - WARNING - Not Found: /static/assets/fonts/metropolis/Metropolis-Bold.otf
+2025-11-10 19:09:12,692 - sentry_logger - WARNING - 404 Not Found: /profiles/DavWin/111
+2025-11-10 19:09:12,694 - django.request - WARNING - Not Found: /profiles/DavWin/111
+2025-11-10 19:09:49,604 - sentry_logger - WARNING - 404 Not Found: /profiles/DavWin/111
+2025-11-10 19:09:49,606 - django.request - WARNING - Not Found: /profiles/DavWin/111
+2025-11-10 19:10:18,736 - sentry_logger - INFO - Homepage accessed
+2025-11-10 19:10:18,857 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
+2025-11-10 19:10:18,859 - django.request - WARNING - Not Found: /static/assets/img/logo.png
+2025-11-10 19:10:40,910 - sentry_logger - INFO - Homepage accessed

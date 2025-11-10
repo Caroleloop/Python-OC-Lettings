@@ -1,5 +1,6 @@
 import os
 import sys
+import sentry_sdk
 
 
 def main():
@@ -32,4 +33,8 @@ def main():
 
 # Entry point for the script
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        sentry_sdk.capture_exception(e)  # Envoie l'erreur à Sentry
+        raise  # Re-lève l'exception pour voir le traceback dans la console
