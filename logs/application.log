@@ -395,3 +395,100 @@ NameError: name 'Http404' is not defined
 2025-11-10 19:10:18,857 - sentry_logger - WARNING - 404 Not Found: /static/assets/img/logo.png
 2025-11-10 19:10:18,859 - django.request - WARNING - Not Found: /static/assets/img/logo.png
 2025-11-10 19:10:40,910 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:29:20,800 - sentry_logger - WARNING - Letting not found: ID 999
+2025-11-12 19:29:21,170 - django.request - WARNING - Not Found: /lettings/999/
+2025-11-12 19:29:21,175 - sentry_logger - INFO - Letting fetched successfully: ID 1
+2025-11-12 19:29:21,210 - sentry_logger - INFO - 1 lettings fetched successfully
+2025-11-12 19:29:21,237 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:29:21,248 - sentry_logger - WARNING - 404 Not Found: 
+2025-11-12 19:29:21,257 - sentry_logger - ERROR - 500 Internal Server Error encountered
+NoneType: None
+2025-11-12 19:29:21,342 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:29:22,584 - sentry_logger - INFO - Profile fetched for user: jane
+2025-11-12 19:29:23,005 - sentry_logger - WARNING - Profile not found for user: unknown_user
+2025-11-12 19:29:23,424 - sentry_logger - INFO - 1 profiles fetched successfully
+2025-11-12 19:35:23,542 - sentry_logger - WARNING - Letting not found: ID 999
+2025-11-12 19:35:23,631 - django.request - WARNING - Not Found: /lettings/999/
+2025-11-12 19:35:23,636 - sentry_logger - INFO - Letting fetched successfully: ID 1
+2025-11-12 19:35:23,654 - sentry_logger - INFO - 1 lettings fetched successfully
+2025-11-12 19:35:23,679 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:35:23,690 - sentry_logger - WARNING - 404 Not Found: 
+2025-11-12 19:35:23,700 - sentry_logger - ERROR - 500 Internal Server Error encountered
+NoneType: None
+2025-11-12 19:35:23,733 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:35:24,998 - sentry_logger - INFO - Profile fetched for user: jane
+2025-11-12 19:35:25,416 - sentry_logger - ERROR - Error retrieving profiles: DB error
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\profiles\views.py", line 22, in profiles_index
+    profiles_list = Profile.objects.all()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: DB error
+2025-11-12 19:35:25,839 - sentry_logger - INFO - 1 profiles fetched successfully
+2025-11-12 19:37:30,430 - sentry_logger - WARNING - Letting not found: ID 999
+2025-11-12 19:37:30,515 - django.request - WARNING - Not Found: /lettings/999/
+2025-11-12 19:37:30,520 - sentry_logger - INFO - Letting fetched successfully: ID 1
+2025-11-12 19:37:30,539 - sentry_logger - INFO - 1 lettings fetched successfully
+2025-11-12 19:37:30,564 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:37:30,576 - sentry_logger - WARNING - 404 Not Found: 
+2025-11-12 19:37:30,585 - sentry_logger - ERROR - 500 Internal Server Error encountered
+NoneType: None
+2025-11-12 19:37:30,620 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:37:31,897 - sentry_logger - INFO - Profile fetched for user: jane
+2025-11-12 19:37:32,336 - sentry_logger - ERROR - Error retrieving profiles: DB error
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\profiles\views.py", line 22, in profiles_index
+    profiles_list = Profile.objects.all()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: DB error
+2025-11-12 19:37:32,795 - sentry_logger - ERROR - Unexpected error for user 'jane': Unexpected DB error
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\profiles\views.py", line 48, in profile
+    profile = Profile.objects.get(user__username=username)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: Unexpected DB error
+2025-11-12 19:37:33,244 - sentry_logger - INFO - 1 profiles fetched successfully
+2025-11-12 19:37:47,895 - sentry_logger - WARNING - Letting not found: ID 999
+2025-11-12 19:37:47,980 - django.request - WARNING - Not Found: /lettings/999/
+2025-11-12 19:37:47,985 - sentry_logger - INFO - Letting fetched successfully: ID 1
+2025-11-12 19:37:48,004 - sentry_logger - INFO - 1 lettings fetched successfully
+2025-11-12 19:37:48,029 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:37:48,040 - sentry_logger - WARNING - 404 Not Found: 
+2025-11-12 19:37:48,052 - sentry_logger - ERROR - 500 Internal Server Error encountered
+NoneType: None
+2025-11-12 19:37:48,087 - sentry_logger - INFO - Homepage accessed
+2025-11-12 19:37:49,335 - sentry_logger - INFO - Profile fetched for user: jane
+2025-11-12 19:37:49,749 - sentry_logger - ERROR - Error retrieving profiles: DB error
+Traceback (most recent call last):
+  File "C:\Formation\Projet_13\Python-OC-Lettings\profiles\views.py", line 22, in profiles_index
+    profiles_list = Profile.objects.all()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    raise effect
+Exception: DB error
+2025-11-12 19:37:50,173 - sentry_logger - INFO - 1 profiles fetched successfully

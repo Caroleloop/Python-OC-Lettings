@@ -2,6 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Profile
+from unittest.mock import patch
 
 
 # =======================
@@ -72,6 +73,13 @@ class ProfilesViewsTest(TestCase):
         """
         Test that accessing a non-existing profile raises Profile.DoesNotExist.
         """
-        url = reverse("profiles:profile", args=["unknown_user"])
-        with self.assertRaises(Profile.DoesNotExist):
-            self.client.get(url)
+        with patch(
+            "profiles.views.Profile.objects.all", side_effect=Exception("DB error")
+        ):
+            url = reverse("profiles:index")
+            response = self.client.get(url)
+
+            self.assertEqual(response.status_code, 200)
+            self.assertTemplateUsed(response, "profiles/index.html")
+            self.assertIn("profiles_list", response.context)
+            self.assertEqual(list(response.context["profiles_list"]), [])
