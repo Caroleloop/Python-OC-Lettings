@@ -1,6 +1,22 @@
-**/__pycache__
-*.pyc
-venv
-.pytest_cache
-.coveragerc
+# Environnements virtuels
+venv/
 .env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local settings
+*.sqlite3
+*.log
+
+# Static files générées
+staticfiles/
+static/
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+*.pid
