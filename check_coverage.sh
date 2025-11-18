@@ -18,14 +18,13 @@ $PYTHON -m coverage run -m pytest
 echo "Generating coverage report..."
 $PYTHON -m coverage report
 
-# Récupérer le pourcentage de couverture de la dernière ligne
-COV=$($PYTHON -m coverage report | tail -n1 | awk '{print $4}' | sed 's/%//' | awk '{printf "%d\n",$1}')
+# Récupérer la couverture totale avec grep/awk
+COV=$($PYTHON -m coverage report | grep TOTAL | awk '{print int($4)}')
+
 REQUIRED=80
+echo "Coverage found: $COV%, required: $REQUIRED%"
 
-
-# Vérifier si la couverture est suffisante
-compare=$(echo "$COV >= $REQUIRED" | bc)
-if [ "$compare" -ne 1 ]; then
+if [ "$COV" -lt "$REQUIRED" ]; then
   echo "Coverage is $COV%, required is $REQUIRED%"
   exit 1
 fi
