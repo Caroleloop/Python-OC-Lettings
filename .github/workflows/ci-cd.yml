@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: ["**"]
 
-env:
-  IMAGE_NAME: caroleloop/oc_lettings_site
+# env:
+#   IMAGE_NAME: caroleloop/oc_lettings_site
 
 jobs:
   test:
@@ -52,6 +52,9 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
+
+      - name: Docker login
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3.6.0
