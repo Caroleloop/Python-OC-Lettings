@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Install dependencies
         run: |
@@ -31,6 +31,15 @@ jobs:
       - name: Lint
         run: |
           flake8 .
+
+      - name: Check workspace
+        run: |
+          echo "Current directory: $(pwd)"
+          ls -R
+
+      - name: Test discovery
+        run: |
+          python -m pytest --collect-only
 
       - name: Run tests & check coverage
         run: |
