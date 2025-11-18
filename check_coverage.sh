@@ -3,14 +3,14 @@ set -e
 
 # Lancer les tests avec coverage
 echo "Running tests with coverage..."
-$PYTHON -m coverage run -m pytest
+python3 -m coverage run -m pytest
 
 # Générer le rapport texte
 echo "Generating coverage report..."
-$PYTHON -m coverage report
+python3 -m coverage report
 
 # Récupérer le pourcentage de couverture de la dernière ligne
-COV=$($PYTHON -m coverage report | tail -n1 | awk '{print $4}' | sed 's/%//' | awk '{printf "%d\n",$1}')
+COV=$(python3 -m coverage report | tail -n1 | awk '{print $4}' | sed 's/%//' | awk '{printf "%d\n",$1}')
 REQUIRED=80
 
 
