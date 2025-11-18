@@ -1,8 +1,5 @@
-# Exit si une commande échoue
+#!/bin/bash
 set -e
-
-# Chemin vers python du venv
-PYTHON="./venv/Scripts/python.exe"
 
 # Lancer les tests avec coverage
 echo "Running tests with coverage..."
