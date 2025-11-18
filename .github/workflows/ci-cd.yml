@@ -32,17 +32,11 @@ jobs:
         run: |
           flake8 .
 
-      - name: Check workspace
+      - name: Load .env and Run tests & check coverage
         run: |
-          echo "Current directory: $(pwd)"
-          ls -R
-
-      - name: Test discovery
-        run: |
-          python -m pytest --collect-only
-
-      - name: Run tests & check coverage
-        run: |
+          echo "Loading environment variables from .env..."
+          export $(grep -v '^#' .env | xargs)
+          echo "SECRET_KEY is set for CI"
           ./check_coverage.sh
 
   build_and_push:
