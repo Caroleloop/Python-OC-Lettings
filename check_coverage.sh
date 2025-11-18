@@ -1,16 +1,25 @@
 #!/bin/bash
 set -e
 
+# Détecte python disponible
+if command -v python3 &>/dev/null; then
+    PYTHON=python3
+else
+    PYTHON=python
+fi
+
+echo "Using $PYTHON"
+
 # Lancer les tests avec coverage
 echo "Running tests with coverage..."
-python3 -m coverage run -m pytest
+$PYTHON -m coverage run -m pytest
 
 # Générer le rapport texte
 echo "Generating coverage report..."
-python3 -m coverage report
+$PYTHON -m coverage report
 
 # Récupérer le pourcentage de couverture de la dernière ligne
-COV=$(python3 -m coverage report | tail -n1 | awk '{print $4}' | sed 's/%//' | awk '{printf "%d\n",$1}')
+COV=$($PYTHON -m coverage report | tail -n1 | awk '{print $4}' | sed 's/%//' | awk '{printf "%d\n",$1}')
 REQUIRED=80
 
 
