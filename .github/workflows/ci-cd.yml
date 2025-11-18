@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: ["**"]
 
-env:
-  IMAGE_NAME: caroleloop/oc_lettings_site
+# env:
+#   IMAGE_NAME: caroleloop/oc_lettings_site
 
 jobs:
   test:
