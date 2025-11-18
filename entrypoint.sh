@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+# Appliquer les migrations
+echo "Applying database migrations..."
+python manage.py migrate --noinput
+
+# Lancer Gunicorn
+echo "Starting Gunicorn..."
+exec gunicorn oc_lettings_site.wsgi:application \
+    --bind 0.0.0.0:8000 \
+    --workers 3

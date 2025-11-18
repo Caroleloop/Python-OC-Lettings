@@ -25,8 +25,12 @@ COPY . /app/
 # Collecter les fichiers statiques (production)
 RUN python manage.py collectstatic --noinput
 
+# Copie du script d'entrée
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
 # Exposer un port accessible en dehors du conteneur
 EXPOSE 8000
 
 # Commande de lancement
-CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn oc_lettings_site.wsgi:application --bind 0.0.0.0:8000 --workers 3"]
+CMD ["/app/entrypoint.sh"]
