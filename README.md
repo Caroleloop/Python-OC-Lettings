@@ -75,3 +75,50 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1`
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+
+# Déploiement
+
+## Fonctionnement général du déploiement
+
+Lorsqu'un déploiement est déclenché (manuellement ou suite à un _push_
+GitHub), Render exécute automatiquement une série d'étapes :
+
+1.  **Clone du repository GitHub**
+2.  **Installation des dépendances**
+3.  **Exécution des migrations Django**
+4.  **Collecte des fichiers statiques**
+5.  **Lancement du serveur web via Gunicorn + Whitenoise**
+
+---
+
+## Configuration Render
+
+### Variables d'environnement
+
+À configurer dans **Render → Environment Variables** :
+
+    DEBUG=False
+    ALLOWED_HOSTS=<url du service>
+    SENTRY_DSN=<optionnel>
+
+---
+
+### Build Command
+
+    pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
+
+---
+
+### Start Command
+
+    gunicorn oc_lettings_site.wsgi:application --bind 0.0.0.0:$PORT
+
+---
+
+## Étapes de déploiement
+
+1.  **Push GitHub**
+2.  **Créer un service Web Render**
+3.  **Configurer les variables + commandes**
+4.  **Déployer**
+5.  **Tester l'URL Render**
