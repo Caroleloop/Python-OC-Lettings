@@ -69,10 +69,11 @@ jobs:
       - name: Build and push image
         run: |
           IMAGE=${IMAGE_NAME}:${SHA}
+          docker build -t $IMAGE .
           docker push $IMAGE
           # tag 'test' optional
-          docker tag $IMAGE ${IMAGE_NAME}:test
-          docker push ${IMAGE_NAME}:test
+          docker tag $IMAGE ${IMAGE_NAME}:latest
+          docker push ${IMAGE_NAME}:latest
         env:
           SHA: ${{ steps.vars.outputs.sha }}
 
