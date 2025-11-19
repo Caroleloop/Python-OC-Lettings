@@ -66,7 +66,6 @@ jobs:
           echo $IMAGE
           docker build -t $IMAGE .
           docker push $IMAGE
-          # tag 'test' optional
           docker tag $IMAGE ${IMAGE_NAME}:latest
           docker push ${IMAGE_NAME}:latest
         env:
@@ -89,12 +88,15 @@ jobs:
         env:
           RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
-          IMAGE: ${{ needs.build_and_push.outputs.image }}
         run: |
-          # Ex: trigger render deploy via API
+          if [ -z "$RENDER_SERVICE_ID" ] || [ -z "$RENDER_API_KEY" ]; then
+            echo "ERROR: Render secrets are not set!"
+            exit 1
+          fi
+          echo "Triggering Render deploy..."
           curl -X POST "https://api.render.com/v1/services/${RENDER_SERVICE_ID}/deploys" \
             -H "Authorization: Bearer ${RENDER_API_KEY}" \
             -H "Content-Type: application/json" \
-            -d "{\"clearCache\":true}"
+            -d '{"clearCache": true}'
     outputs:
       image: ${{ steps.setimage.outputs.image }}
