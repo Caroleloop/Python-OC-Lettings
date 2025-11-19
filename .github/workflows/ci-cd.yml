@@ -68,16 +68,19 @@ jobs:
 
       - name: Build and push image
         run: |
-          IMAGE=${IMAGE_NAME}:${{ steps.vars.outputs.sha }}
-          docker build -t $IMAGE .
+          IMAGE=${IMAGE_NAME}:${SHA}
           docker push $IMAGE
           # tag 'latest' optional
           docker tag $IMAGE ${IMAGE_NAME}:latest
           docker push ${IMAGE_NAME}:latest
+        env:
+          SHA: ${{ steps.vars.outputs.sha }}
 
       - name: Set output image
         id: setimage
-        run: echo "image=${IMAGE_NAME}:${{ steps.vars.outputs.sha }}" >> $GITHUB_OUTPUT
+        run: echo "image=${IMAGE_NAME}:${SHA}" >> $GITHUB_OUTPUT
+        env:
+          SHA: ${{ steps.vars.outputs.sha }}
 
   deploy:
     name: Deploy to Render
