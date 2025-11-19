@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: ["**"]
 
-# env:
-#   IMAGE_NAME: caroleloop/oc_lettings_site
+env:
+  IMAGE_NAME: ${{ secrets.IMAGE_NAME }}
 
 jobs:
   test:
@@ -84,6 +84,7 @@ jobs:
     needs: build_and_push
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    environment: env_secret
     steps:
       - name: Trigger Render deploy (using API)
         env:
