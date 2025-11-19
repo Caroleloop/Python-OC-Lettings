@@ -69,6 +69,7 @@ jobs:
       - name: Build and push image
         run: |
           IMAGE=${IMAGE_NAME}:${SHA}
+          echo $IMAGE
           docker buildx build -t $IMAGE .
           docker push $IMAGE
           # tag 'test' optional
