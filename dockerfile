@@ -1,5 +1,5 @@
 # Choix de l'image de base
-FROM python:3.11-slim
+FROM python:3.13-slim
 
 # Empêcher la création de fichiers .pyc et forcer l’affichage direct des logs
 ENV PYTHONDONTWRITEBYTECODE=1
