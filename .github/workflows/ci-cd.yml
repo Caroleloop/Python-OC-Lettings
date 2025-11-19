@@ -70,9 +70,9 @@ jobs:
         run: |
           IMAGE=${IMAGE_NAME}:${SHA}
           docker push $IMAGE
-          # tag 'latest' optional
-          docker tag $IMAGE ${IMAGE_NAME}:latest
-          docker push ${IMAGE_NAME}:latest
+          # tag 'test' optional
+          docker tag $IMAGE ${IMAGE_NAME}:test
+          docker push ${IMAGE_NAME}:test
         env:
           SHA: ${{ steps.vars.outputs.sha }}
 
