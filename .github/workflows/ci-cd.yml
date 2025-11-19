@@ -70,7 +70,7 @@ jobs:
         run: |
           IMAGE=${IMAGE_NAME}:${SHA}
           echo $IMAGE
-          docker buildx build -t $IMAGE .
+          docker build -t $IMAGE .
           docker push $IMAGE
           # tag 'test' optional
           docker tag $IMAGE ${IMAGE_NAME}:latest
