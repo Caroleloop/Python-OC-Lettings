@@ -5,6 +5,9 @@ set -e
 echo "Applying database migrations..."
 python manage.py migrate --noinput
 
+echo "Collecting static files..."
+python manage.py collectstatic --noinput
+
 # Lancer Gunicorn
 echo "Starting Gunicorn..."
 exec gunicorn oc_lettings_site.wsgi:application \
