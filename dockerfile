@@ -22,8 +22,8 @@ RUN pip install -r requirements.txt
 # Copier tout le projet dans l'image
 COPY . /app/
 
-# Collecter les fichiers statiques (production)
-RUN python manage.py collectstatic --noinput
+# # Collecter les fichiers statiques (production)
+# RUN python manage.py collectstatic --noinput
 
 # Copie du script d'entrée
 COPY entrypoint.sh /app/entrypoint.sh
