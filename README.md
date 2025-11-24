@@ -122,3 +122,26 @@ GitHub), Render exécute automatiquement une série d'étapes :
 3.  **Configurer les variables + commandes**
 4.  **Déployer**
 5.  **Tester l'URL Render**
+
+# Génération de la documentation Read the Docs
+
+La documentation utilise **Sphinx** et peut être générée ou publiée via
+**Read the Docs**.
+
+## Génération locale
+
+```bash
+source venv/bin/activate
+pip install -r docs/requirements.txt
+cd docs
+make html
+open _build/html/index.html
+```
+
+## Déploiement sur Read the Docs
+
+1.  Créer un compte RTD.
+2.  Connecter RTD à GitHub.
+3.  Importer le repository.
+4.  Vérifier la présence d'un fichier `.readthedocs.yaml`.
+5.  RTD reconstruira automatiquement la documentation à chaque push.
