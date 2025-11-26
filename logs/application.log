@@ -492,3 +492,12 @@ Traceback (most recent call last):
     raise effect
 Exception: DB error
 2025-11-12 19:37:50,173 - sentry_logger - INFO - 1 profiles fetched successfully
+2025-11-26 08:06:59,437 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-26 08:07:05,840 - sentry_logger - INFO - Homepage accessed
+2025-11-26 08:07:30,189 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-26 08:07:32,146 - sentry_logger - INFO - Letting fetched successfully: ID 1
+2025-11-26 08:07:38,222 - sentry_logger - INFO - 4 profiles fetched successfully
+2025-11-26 08:07:39,539 - sentry_logger - INFO - Profile fetched for user: AirWow
+2025-11-26 08:08:05,854 - sentry_logger - INFO - Homepage accessed
+2025-11-26 08:08:07,258 - sentry_logger - INFO - 6 lettings fetched successfully
+2025-11-26 08:08:09,306 - sentry_logger - INFO - 4 profiles fetched successfully
